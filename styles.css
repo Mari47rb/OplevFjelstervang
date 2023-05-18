@@ -1,0 +1,61 @@
+/* -----BASIS FOR HELE SITET---------------*/
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+@font-face{
+    font-family: 'Nunito Sans', sans-serif;
+    src:url(NunitoSans-VariableFont.ttf)
+}
+
+/* -----HEADER-----------------------------*/
+
+#logo{
+    height: 53px;
+    right: 50px;
+    margin-top: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: right;
+    background-color: white;
+    align-items: center;
+    border-bottom: solid;
+    border-width: 0.5px;
+    border-color: black; 
+    position: fixed;
+    top: 0px;
+    padding-right: 30px;
+    width: 100%;
+    z-index: 3;
+}
+
+.menu{
+    font-family:'Nunito Sans', sans-serif;
+    color: black;
+}
+
+a:hover{
+    color: #CC3F47;
+}
+
+#bookheader{
+    font-family:'Nunito Sans', sans-serif;
+    font-size: 12px;
+    background-color: #CC3F47;
+    color: white;
+    width: 121px;
+    height: 31px;
+    padding: 15px;
+}
+
+#bookheader:hover{
+    text-decoration:underline;
+}
