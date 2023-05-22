@@ -6,56 +6,252 @@
 }
 
 body{
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
 
 @font-face{
-    font-family: 'Nunito Sans', sans-serif;
-    src:url(NunitoSans-VariableFont.ttf)
+    font-family: Inter;
+    src:url(Inter-VariableFont_slnt,wght.ttf)
 }
+/* -----OVERSKRIFTER---------------*/
+
+h1{/* overskriften for hvert html-dokument */
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 40pt;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    color: #344214;
+}
+
+h2{ /* Overskriften i hvert kort */
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 20pt;
+    letter-spacing: 0.05px;
+
+    margin-top: 30px;
+    text-align: center;
+
+    color: #344214;
+}
+
+h3{/* Underoverskrifterne i artiklerne */
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 12pt;
+    line-height: 35px;
+}
+
+p{/* Brødteksten*/
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 12pt;
+    line-height: 35px;
+    margin-top: 30px;
+}
+
 
 /* -----HEADER-----------------------------*/
-
-#logo{
-    height: 53px;
-    right: 50px;
-    margin-top: 10px;
-}
-
 header{
     display: flex;
-    justify-content: right;
     background-color: white;
+    justify-content: space-between;
     align-items: center;
+
     border-bottom: solid;
     border-width: 0.5px;
     border-color: black; 
-    position: fixed;
+    position: sticky;
     top: 0px;
     padding-right: 30px;
     width: 100%;
-    z-index: 3;
+
+    z-index: 2;
+}
+
+#logo{
+    height: 53px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .menu{
     font-family:'Nunito Sans', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
     color: black;
+    padding: 20px;
 }
 
-a:hover{
+header a:hover{
     color: #CC3F47;
 }
 
 #bookheader{
     font-family:'Nunito Sans', sans-serif;
-    font-size: 12px;
+    font-weight: 200;
+    font-size: 12pt;
     background-color: #CC3F47;
     color: white;
-    width: 121px;
-    height: 31px;
-    padding: 15px;
+    padding: 12px;
 }
 
 #bookheader:hover{
     text-decoration:underline;
+}
+
+/* -----FORSIDE-----------------------------*/
+
+#forsidebillede{
+    width: 100%;
+}
+
+#velkommentekst{
+    background-color: #EBEDE7;
+    text-align: center;
+    padding: 5%;
+    margin-top: -5px;
+}
+.kort{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    color: black;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-bottom: 4%;
+}
+
+.kort section{
+    width: 350px;
+    height: 580px;
+    margin: 20px;
+
+    background-color:#EBEDE7;
+}
+
+
+.kort section a{
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 35px;
+}
+
+.kort h2{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+.kort section:hover{
+    opacity: 0.8;
+}
+
+
+#fjelstervangkort{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+/* -----INSPIRATIONSSITE----------------------------*/
+
+.smørblomstbanner{
+    width: 100%;
+}
+
+.kvadrater{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    color: black;
+}
+
+.kvadrater > section{
+    width: 500px;
+    height: 500px;
+    margin: 15px;
+
+    background-color:#EBEDE7;
+}
+
+
+.kvadrater section a{
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 12pt;
+    line-height: 35px;
+}
+
+.kvadrater section p{
+    padding-top: 8%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.artikeloverskrift{
+    margin-top: 30%;
+}
+
+
+/* -----FOOTER--------------------------------------*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    background-color: #344214;
+    margin-top: 10%;
+    color: white;
+}
+
+footer section{
+    flex-wrap: wrap;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+footer section a{
+    text-decoration: none;
+    color: white;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 35px;
+}
+
+.footeroverskrifter{
+    font-size: 20px;
+    text-align: left;
+
+    color: white;
+}
+
+/* -----RESPONSIVE WEBDESIGN-------------------*/
+
+
+/* MOBIL: */
+@media screen and (max-width:1190px){
+
+}
+
+/* LAPTOP: */
+@media screen and (min-width:1190px){
 }
