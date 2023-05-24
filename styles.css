@@ -1,4 +1,4 @@
-/* -----BASIS FOR HELE SITET---------------*/
+/* -----BASIS FOR HELE SITET---------------------------------------------------*/
 *{
     margin: 0px;
     box-sizing: border-box;
@@ -13,12 +13,12 @@ body{
     font-family: Inter;
     src:url(Inter-VariableFont_slnt,wght.ttf)
 }
-/* -----OVERSKRIFTER---------------*/
+/* -----OVERSKRIFTER---------------------------------------------------------*/
 
 h1{/* overskriften for hvert html-dokument */
     font-family: Inter;
     font-weight: 300;
-    font-size: 40pt;
+    font-size: 30pt;
     text-align: center;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -26,7 +26,7 @@ h1{/* overskriften for hvert html-dokument */
     color: #344214;
 }
 
-h2{ /* Overskriften i hvert kort */
+h2{ /* Overskriften i hvert kort samt overskrifter i burgermenu */
     font-family: Inter;
     font-weight: 300;
     font-size: 20pt;
@@ -42,40 +42,50 @@ h3{/* Underoverskrifterne i artiklerne */
     font-family: Inter;
     font-weight: 700;
     font-size: 12pt;
-    line-height: 35px;
+    color: #344214;
 }
 
 p{/* Brødteksten*/
     font-family: Inter;
     font-weight: 300;
-    font-size: 12pt;
+    font-size: 11pt;
     line-height: 35px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
-/* -----HEADER-----------------------------*/
+/* -----HEADER-----------------------------------------------------------------*/
 header{
     display: flex;
-    background-color: white;
+    height:60px;
+    
     justify-content: space-between;
     align-items: center;
 
     border-bottom: solid;
     border-width: 0.5px;
     border-color: black; 
-    position: sticky;
+    
     top: 0px;
     padding-right: 30px;
     width: 100%;
 
+    background-color: white;
+
+    position: sticky;
     z-index: 2;
 }
 
 #logo{
-    height: 53px;
+    height: 45px;
     margin-left: 20px;
     margin-top: 10px;
+}
+
+#laptopmenu{
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu{
@@ -86,11 +96,8 @@ header{
     padding: 20px;
 }
 
-header a:hover{
-    color: #CC3F47;
-}
 
-#bookheader{
+#bookknap{
     font-family:'Nunito Sans', sans-serif;
     font-weight: 200;
     font-size: 12pt;
@@ -99,11 +106,50 @@ header a:hover{
     padding: 12px;
 }
 
-#bookheader:hover{
+/*Hovereffekter i navbaren*/
+
+header a:hover{
+    color: #CC3F47;
+}
+
+#bookknap:hover{
     text-decoration:underline;
 }
 
-/* -----FORSIDE-----------------------------*/
+/* -----BURGERMENU-----------------------------------------------------------------*/
+#burgermenubody{
+    background-color: #344214;
+}
+
+#burgermenubody h2{
+    color: white;
+    font-weight: 200;
+    padding: 20px;
+    padding-bottom: 40px;
+
+    border-bottom: solid;
+    border-width: 0.5px;
+    border-color:white; 
+}
+
+#burger{
+    height:30px;
+    padding: 5px;
+}
+
+#kryds{
+    display: flex;
+    justify-content: right;
+    height: 33px;
+    padding: 5px;
+}
+
+#burgermenubody a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+/* -----FORSIDE--------------------------------------------------------------------*/
 
 #forsidebillede{
     width: 100%;
@@ -150,6 +196,11 @@ header a:hover{
     padding-right: 2%;
 }
 
+.kort p{
+    padding-left:4%;
+    padding-right: 4%;
+}
+
 
 .kort section:hover{
     opacity: 0.8;
@@ -164,13 +215,13 @@ header a:hover{
     padding-top: 5%;
 }
 
-/* -----INSPIRATIONSSITE----------------------------*/
+/* -----INSPIRATIONSSITE----------------------------------------------------------------*/
 
 .smørblomstbanner{
     width: 100%;
 }
 
-.kvadrater{
+.laptopkvadrater{
     display: flex;
     justify-content:center;
     text-align: center;
@@ -179,7 +230,7 @@ header a:hover{
     color: black;
 }
 
-.kvadrater > section{
+.laptopkvadrater > section{
     width: 500px;
     height: 500px;
     margin: 15px;
@@ -188,7 +239,7 @@ header a:hover{
 }
 
 
-.kvadrater section a{
+.laptopkvadrater section a{
     text-decoration: none;
     color: black;
     font-family: Inter;
@@ -197,7 +248,7 @@ header a:hover{
     line-height: 35px;
 }
 
-.kvadrater section p{
+.laptopkvadrater section p{
     padding-top: 8%;
     padding-left: 8%;
     padding-right: 8%;
@@ -207,8 +258,53 @@ header a:hover{
     margin-top: 30%;
 }
 
+.laptopkvadrater section:hover{
+    opacity: 0.7;
+}
 
-/* -----FOOTER--------------------------------------*/
+/* -----ARTIKLER STYLES HER--------------------------------------------------------------------------*/
+.øverste_artikelbillede{
+    width: 100%;
+    z-index: 0;
+}
+
+/* Overskriften på artiklerne står i denne hvide bjælke*/
+.hvid_bjælke_til_artikler{
+    position: absolute;
+    margin-top:-100px;
+    padding-top: 30px;
+    margin-left:10%;
+
+    width: 80%;
+    background-color: white;
+    z-index: 1;
+    
+}
+
+/*Artiklernes indhold styles her*/
+.brødteksten_i_artiklerne{
+    display: absolute;
+    width: 60%;
+    margin-left:20%;
+    margin-top: 130px;
+}
+
+.brødteksten_i_artiklerne h3{
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
+
+/* Her styles billederne i artiklerne*/
+.brødteksten_i_artiklerne section{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+
+
+/* -----FOOTER--------------------------------------------------------------------------*/
 
 footer{
     display: flex;
@@ -222,10 +318,10 @@ footer{
 
 footer section{
     flex-wrap: wrap;
-    margin-top: 10%;
+    margin-top: 12%;
     margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 footer section a{
@@ -244,14 +340,76 @@ footer section a{
     color: white;
 }
 
-/* -----RESPONSIVE WEBDESIGN-------------------*/
-
-
-/* MOBIL: */
-@media screen and (max-width:1190px){
-
+#facebookikon{
+    height:50px;
+    margin-bottom: 6px;
+    margin-left: -5px;
 }
+
+#instagramikon{
+    height:63px;
+    margin-left: -5px;
+}
+
+/* -----RESPONSIVE WEBDESIGN-------------------------------------------------------*/
 
 /* LAPTOP: */
-@media screen and (min-width:1190px){
+@media screen and (min-width:768px){
+    /* Lap menu skal vises */
+    #laptopmenu{
+        display: block;
+    }
+
+    /* Burger menu skal skjules */
+    #burger{
+        display: none;
+    }
 }
+
+/* MOBIL: */
+@media screen and (max-width:768px){
+     /* Laptopmenu skal skjules */
+    #laptopmenu{
+        display: none;
+    }
+
+    /* Burger menu skal vises */
+    #burger{
+        display: block;
+    }
+
+    /* Footer placeres vertikalt*/
+    footer{
+        display: inline-block;
+        padding-left: 15%;
+    }
+
+    /* Overskriften i artiklerne rykkes ned og mindskes*/
+    .hvid_bjælke_til_artikler{
+        position:sticky;
+        margin-top:0px;
+        padding: 5px;
+    }
+
+    .hvid_bjælke_til_artikler h1{
+        font-size: 29px;
+    }
+
+    /* Brødteksten får smallere margin*/
+    .brødteksten_i_artiklerne{
+        margin-top: 30px;
+        width: 80%;
+        margin-left:10%;
+    }
+
+    /* Billederne i artiklerne placeres vertikalt*/
+    .brødteksten_i_artiklerne section{
+        display: block;
+        text-align: center;
+    }
+
+
+
+ }
+
+
