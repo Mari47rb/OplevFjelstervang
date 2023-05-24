@@ -1,4 +1,4 @@
-/* -----BASIS FOR HELE SITET---------------------------------------------------*/
+/* -----BASIS FOR HELE SITET-------------------------------------------------------------------------------------------------------*/
 *{
     margin: 0px;
     box-sizing: border-box;
@@ -13,7 +13,7 @@ body{
     font-family: Inter;
     src:url(Inter-VariableFont_slnt,wght.ttf)
 }
-/* -----OVERSKRIFTER---------------------------------------------------------*/
+/* -----OVERSKRIFTER---------------------------------------------------------------------------------------------------------------*/
 
 h1{/* overskriften for hvert html-dokument */
     font-family: Inter;
@@ -54,8 +54,14 @@ p{/* Brødteksten*/
     margin-bottom: 30px;
 }
 
+li{/* Punktsformlister i artiklerne*/
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 11pt;
+    line-height: 35px;
+}
 
-/* -----HEADER-----------------------------------------------------------------*/
+/* -----HEADER----------------------------------------------------------------------------------------------------------------------*/
 header{
     display: flex;
     height:60px;
@@ -116,7 +122,7 @@ header a:hover{
     text-decoration:underline;
 }
 
-/* -----BURGERMENU-----------------------------------------------------------------*/
+/* -----BURGERMENU--------------------------------------------------------------------------------------------------------------------*/
 #burgermenubody{
     background-color: #344214;
 }
@@ -149,11 +155,8 @@ header a:hover{
     color: white;
 }
 
-/* -----FORSIDE--------------------------------------------------------------------*/
+/* -----FORSIDE----------------------------------------------------------------------------------------------------------------------*/
 
-#forsidebillede{
-    width: 100%;
-}
 
 #velkommentekst{
     background-color: #EBEDE7;
@@ -215,7 +218,39 @@ header a:hover{
     padding-top: 5%;
 }
 
-/* -----INSPIRATIONSSITE----------------------------------------------------------------*/
+/*-------VIDEO-------------------------------------------------------------------------------------------------------------------*/
+
+.video{
+    min-height: 90vh;
+    width: 100%;
+    background-image: url(bagrundsvideo.mov);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* Den hvide tekst styles her*/
+.video h5{
+    font-family: Inter;
+    font-size: 130px;
+    text-align: center;
+
+    color: white;   
+}
+.video #oplev_video{
+    padding-top:130px;
+}
+
+#oplev_video{
+    font-weight: 900;
+}
+
+#Fjelstervang_video{
+    font-weight: 300;
+}
+
+/* -----INSPIRATIONSSITE---------------------------------------------------------------------------------------------------------*/
 
 .smørblomstbanner{
     width: 100%;
@@ -230,14 +265,23 @@ header a:hover{
     color: black;
 }
 
-.laptopkvadrater > section{
-    width: 500px;
-    height: 500px;
+main .laptopkvadrater{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.laptopkvadrater section{
+    width: 450px;
+    height: 450px;
     margin: 15px;
 
     background-color:#EBEDE7;
 }
 
+.laptopkvadrater img{
+    width: 450px;
+    height: 450px;
+}
 
 .laptopkvadrater section a{
     text-decoration: none;
@@ -262,7 +306,7 @@ header a:hover{
     opacity: 0.7;
 }
 
-/* -----ARTIKLER STYLES HER--------------------------------------------------------------------------*/
+/* -----ARTIKLER STYLES HER-------------------------------------------------------------------------------------------------------*/
 .øverste_artikelbillede{
     width: 100%;
     z-index: 0;
@@ -290,21 +334,96 @@ header a:hover{
 }
 
 .brødteksten_i_artiklerne h3{
-    margin-top: 40px;
-    margin-bottom: -20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.brødteksten_i_artiklerne p{
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 /* Her styles billederne i artiklerne*/
 .brødteksten_i_artiklerne section{
     display: flex;
-    justify-content: center;
-    margin: auto;
-    padding-bottom: 40px;
+    justify-content:space-around;
 }
 
+.brødteksten_i_artiklerne iframe{
+    margin-bottom: 40px;
+}
 
+.artikelbilleder{
+    margin:40px;
+    padding-bottom: 50px;
+}
 
-/* -----FOOTER--------------------------------------------------------------------------*/
+.artikelbilleder img{
+    width: 350px;
+}
+
+ul{/*Afstanden mellem underoverskriften og punktsformlisten i artiklerne*/
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+button{
+    font-family:'Nunito Sans', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
+    color: white;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+
+    background-color: #CC3F47;
+    border: #CC3F47;
+
+}
+
+.Bookknap_artikel{
+    display:flex;
+    justify-content: center;
+}
+
+.Bookknap_artikel button:hover{
+    text-decoration: underline;
+}
+
+/*Link i guide skal understreges og farves*/
+#bilkalink{
+    text-decoration: underline;
+    color: #344214;
+}
+
+/* -----BOOK HER SITE-------------------------------------------------------------------------------------------------------*/
+
+#bookingskema{
+    display: absolute;
+    width: 60%;
+    margin-left:20%;
+    margin-top: 70px;
+}
+
+#bookingskema p{
+    background-color: #EBEDE7;
+    padding-left: 18px;
+    margin: 10px;
+
+}
+
+#bookingskema section{
+    margin-top: 80px;
+}
+
+#kommentar p{
+    height: 100px;
+}
+
+/* -----FOOTER--------------------------------------------------------------------------------------------------------------*/
 
 footer{
     display: flex;
@@ -351,11 +470,11 @@ footer section a{
     margin-left: -5px;
 }
 
-/* -----RESPONSIVE WEBDESIGN-------------------------------------------------------*/
+/* -----RESPONSIVE WEBDESIGN--------------------------------------------------------------------------------------*/
 
 /* LAPTOP: */
 @media screen and (min-width:768px){
-    /* Lap menu skal vises */
+    /* Laptopmenu skal vises */
     #laptopmenu{
         display: block;
     }
@@ -364,6 +483,7 @@ footer section a{
     #burger{
         display: none;
     }
+
 }
 
 /* MOBIL: */
@@ -391,8 +511,8 @@ footer section a{
         padding: 5px;
     }
 
-    .hvid_bjælke_til_artikler h1{
-        font-size: 29px;
+    main h1{
+        font-size: 32px;
     }
 
     /* Brødteksten får smallere margin*/
@@ -408,7 +528,14 @@ footer section a{
         text-align: center;
     }
 
+    /*Video gøres mindre og skriften rykkes*/
+    .video h5{
+        font-size: 60px;
+    }
 
+    .video #oplev_video{
+        padding-top:200px;
+    }
 
  }
 
