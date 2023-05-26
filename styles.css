@@ -164,6 +164,8 @@ header a:hover{
     padding: 5%;
     margin-top: -5px;
 }
+
+
 .kort{
     display: flex;
     justify-content: center;
@@ -182,6 +184,10 @@ header a:hover{
     margin: 20px;
 
     background-color:#EBEDE7;
+}
+
+.kort section img{
+    width: 100%;
 }
 
 
@@ -204,11 +210,9 @@ header a:hover{
     padding-right: 4%;
 }
 
-
 .kort section:hover{
     opacity: 0.8;
 }
-
 
 #fjelstervangkort{
     display: flex;
@@ -220,26 +224,31 @@ header a:hover{
 
 /*-------VIDEO-------------------------------------------------------------------------------------------------------------------*/
 
-.video{
-    min-height: 90vh;
-    width: 100%;
-    background-image: url(bagrundsvideo.mov);
-    background-position: center;
-    background-size: cover;
+.videoclass {
     position: relative;
-    background-attachment: fixed;
-}
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+  
+.videoclass video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-/* Den hvide tekst styles her*/
-.video h5{
+/* Den hvide tekst over videoen styles her*/
+.videoclass h5{
     font-family: Inter;
     font-size: 130px;
     text-align: center;
 
-    color: white;   
+    color: white;  
 }
-.video #oplev_video{
-    padding-top:130px;
+
+.videoclass #oplev_video{
+    padding-top:70px;
 }
 
 #oplev_video{
@@ -250,12 +259,22 @@ header a:hover{
     font-weight: 300;
 }
 
-/* -----INSPIRATIONSSITE---------------------------------------------------------------------------------------------------------*/
+.tekst_over_video{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* -----HOVEDMENUERNE 'INSPIRATION' OG 'OASER'------------------------------------------------------------------------------------*/
 
 .smørblomstbanner{
     width: 100%;
 }
 
+/* Kortenes størrelser styles her*/
 .laptopkvadrater{
     display: flex;
     justify-content:center;
@@ -266,8 +285,8 @@ header a:hover{
 }
 
 main .laptopkvadrater{
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .laptopkvadrater section{
@@ -283,6 +302,7 @@ main .laptopkvadrater{
     height: 450px;
 }
 
+/* Teksten styles her*/
 .laptopkvadrater section a{
     text-decoration: none;
     color: black;
@@ -354,15 +374,15 @@ main .laptopkvadrater{
 }
 
 .artikelbilleder{
-    margin:40px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .artikelbilleder img{
-    width: 350px;
+    width: 45%;
 }
 
-ul{/*Afstanden mellem underoverskriften og punktsformlisten i artiklerne*/
+/*Afstanden mellem underoverskriften og punktsformlisten i artiklerne*/
+ul{
     margin-top: 10px;
     margin-bottom: 70px;
 }
@@ -377,7 +397,7 @@ button{
     padding-right: 50px;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: 40px;
+    margin-top: 10px;
 
     background-color: #CC3F47;
     border: #CC3F47;
@@ -512,7 +532,7 @@ footer section a{
     }
 
     main h1{
-        font-size: 32px;
+        font-size: 26px;
     }
 
     /* Brødteksten får smallere margin*/
@@ -528,15 +548,41 @@ footer section a{
         text-align: center;
     }
 
+    .artikelbilleder img{
+        width: 80%;
+    }
+    
+    .laptopkvadrater section h2{
+        font-size: 18pt;
+    }
+
     /*Video gøres mindre og skriften rykkes*/
-    .video h5{
+    .videoclass{
+        min-height: 40vh;
+    }
+    .videoclass h5{
         font-size: 60px;
     }
 
-    .video #oplev_video{
-        padding-top:200px;
+    .videoclass #oplev_video{
+        padding-top:70px;
     }
 
+    /*Kortene under hovedmenuerne 'INSPIRATION' og 'OASER' mindskes*/
+    .laptopkvadrater section{
+        width: 350px;
+        height: 350px;
+    }
+
+    .laptopkvadrater img{
+        width: 350px;
+        height: 350px;
+    }
+
+    /* Overskrifternes rykkes lidt op*/
+    .artikeloverskrift{
+        margin-top: 25%;
+    }
  }
 
 
