@@ -103,7 +103,7 @@ header{
 }
 
 
-#bookknap{
+.bookknap{
     font-family:'Nunito Sans', sans-serif;
     font-weight: 200;
     font-size: 12pt;
@@ -112,32 +112,32 @@ header{
     padding: 12px;
 }
 
+div .bookknap{
+    display:flex;
+    justify-content: center;
+    width: 40%;
+    margin-left:30%;
+}
+
+#bookingskema .bookknap{
+    width: 50%;
+    margin-left:25%;
+}
+
 /*Hovereffekter i navbaren*/
 
 header a:hover{
     color: #CC3F47;
 }
 
-#bookknap:hover{
+.bookknap:hover{
     text-decoration:underline;
+    color: white;
 }
 
 /* -----BURGERMENU--------------------------------------------------------------------------------------------------------------------*/
-#burgermenubody{
-    background-color: #344214;
-}
 
-#burgermenubody h2{
-    color: white;
-    font-weight: 200;
-    padding: 20px;
-    padding-bottom: 40px;
-
-    border-bottom: solid;
-    border-width: 0.5px;
-    border-color:white; 
-}
-
+/* Ikoner i burgermenuen*/
 #burger{
     height:30px;
     padding: 5px;
@@ -150,9 +150,38 @@ header a:hover{
     padding: 5px;
 }
 
-#burgermenubody a:hover{
-    text-decoration: underline;
+/* Burgermenuens krop styles her*/
+#burgermenubody{
+    background-color:#344214;
+}
+
+#burgermenubody h2{
+    font-weight: 200;
+    padding: 20px;
+    padding-bottom: 40px;
+
+    border-bottom: solid;
+    border-width: 0.5px;
+    border-color:white; 
+}
+
+.hovedmenuer_burgermenu{
     color: white;
+}
+
+#book_burgermenu{
+    color:lightpink;
+}
+
+/* Hover effekter i burgermenuen*/
+
+.hovedmenuer_burgermenu:hover{
+    color:#CC3F47; 
+}
+
+#book_burgermenu:hover{
+    text-decoration: underline;
+    color:#CC3F47;
 }
 
 /* -----FORSIDE----------------------------------------------------------------------------------------------------------------------*/
@@ -181,7 +210,9 @@ header a:hover{
 .kort section{
     width: 350px;
     height: 580px;
-    margin: 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
 
     background-color:#EBEDE7;
 }
@@ -220,6 +251,8 @@ header a:hover{
     text-align: center;
     justify-content: center;
     padding-top: 5%;
+    width:70%;
+    height:450px;
 }
 
 /*-------VIDEO-------------------------------------------------------------------------------------------------------------------*/
@@ -228,7 +261,7 @@ header a:hover{
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-  }
+}
   
 .videoclass video {
     position: absolute;
@@ -236,7 +269,7 @@ header a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-  }
+}
 
 /* Den hvide tekst over videoen styles her*/
 .videoclass h5{
@@ -347,7 +380,6 @@ main .laptopkvadrater{
 
 /*Artiklernes indhold styles her*/
 .brødteksten_i_artiklerne{
-    display: absolute;
     width: 60%;
     margin-left:20%;
     margin-top: 130px;
@@ -371,6 +403,8 @@ main .laptopkvadrater{
 
 .brødteksten_i_artiklerne iframe{
     margin-bottom: 40px;
+    width: 100%;
+    height:350px;
 }
 
 .artikelbilleder{
@@ -381,36 +415,10 @@ main .laptopkvadrater{
     width: 45%;
 }
 
-/*Afstanden mellem underoverskriften og punktsformlisten i artiklerne*/
+/*Afstanden mellem underrubrikker og punktsformlisten i artiklerne*/
 ul{
     margin-top: 10px;
     margin-bottom: 70px;
-}
-
-button{
-    font-family:'Nunito Sans', sans-serif;
-    font-weight: 200;
-    font-size: 12pt;
-    color: white;
-
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: 10px;
-
-    background-color: #CC3F47;
-    border: #CC3F47;
-
-}
-
-.Bookknap_artikel{
-    display:flex;
-    justify-content: center;
-}
-
-.Bookknap_artikel button:hover{
-    text-decoration: underline;
 }
 
 /*Link i guide skal understreges og farves*/
@@ -422,7 +430,6 @@ button{
 /* -----BOOK HER SITE-------------------------------------------------------------------------------------------------------*/
 
 #bookingskema{
-    display: absolute;
     width: 60%;
     margin-left:20%;
     margin-top: 70px;
@@ -532,12 +539,12 @@ footer section a{
     }
 
     main h1{
-        font-size: 26px;
+        font-size: 24px;
     }
 
     /* Brødteksten får smallere margin*/
     .brødteksten_i_artiklerne{
-        margin-top: 30px;
+        margin-top: 10px;
         width: 80%;
         margin-left:10%;
     }
@@ -551,14 +558,10 @@ footer section a{
     .artikelbilleder img{
         width: 80%;
     }
-    
-    .laptopkvadrater section h2{
-        font-size: 18pt;
-    }
 
     /*Video gøres mindre og skriften rykkes*/
     .videoclass{
-        min-height: 40vh;
+        min-height: 33vh;
     }
     .videoclass h5{
         font-size: 60px;
@@ -570,19 +573,41 @@ footer section a{
 
     /*Kortene under hovedmenuerne 'INSPIRATION' og 'OASER' mindskes*/
     .laptopkvadrater section{
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 0%;
+        margin-right: 0%;
     }
 
     .laptopkvadrater img{
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
+        
     }
 
-    /* Overskrifternes rykkes lidt op*/
+    /* Overskrifternes rykkes lidt op og mindskes*/
     .artikeloverskrift{
-        margin-top: 25%;
+        margin-top: 20%;
     }
- }
 
+    .laptopkvadrater section h2{
+        font-size: 16pt;
+    }
+
+    .laptopkvadrater section p{
+        font-size: 12px;
+        padding-top: 0px;
+    }
+
+    .kort h2{
+        font-size: 18px;
+    }
+
+    #velkommentekst p{
+        font-size: 8.5pt;
+    }
+    
+}
 
